@@ -1,0 +1,64 @@
+<!DOCTYPE html>      
+<!-- بتقول للمتصفح إن دي صفحة HTML 5 -->
+
+<html lang="en">     
+<!-- بتبدأ صفحة HTML واللغة الأساسية إنجليزي -->
+
+<head>
+    <meta charset="UTF-8">   
+    <!-- الترميز UTF-8 علشان يدعم الحروف كلها (حتى العربي) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- بيخلي الصفحة متجاوبة مع الشاشات المختلفة (موبايل - لابتوب) -->
+    
+    <title>Dashboard</title>    
+    <!-- العنوان اللي بيظهر فوق في التاب -->
+    
+    <link rel="stylesheet" href="css/style.css"> 
+    <!-- دي بتربط الصفحة بملف CSS خارجي اسمه style.css موجود في فولدر اسمه css، علشان تنسّق شكل الصفحة--> 
+
+</head>
+<body>    
+<!-- الهيكل الأساسي للصفحة -->
+    
+    
+    <header>
+    <!-- الجزء اللي فوق في الصفحة (الهيدر) -->
+
+        <h1>Dashboard</h1>
+        <nav>
+        <!-- شريط التصفح اللي فيه البحث واللوج أوت -->
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search...">
+                 <!-- اليوزر هيكتب هنا -->
+
+                <button id="searchBtn">Search</button>
+                <!-- ده البتن اللي هيبدأ البحث -->
+
+            </div>
+            <a href="#" id="logoutBtn">Logout</a>
+            <!--بتن اللوج اوت-->
+        </nav>
+     
+    </header>
+    <main>
+        <section id="searchResults">
+            <!-- Search results will appear here -->
+        </section>
+        <section class="user-orders">
+               <!-- هنا هتظهر الاوردرز بتاعت اليوزر-->
+
+            <h2>Your Orders</h2>
+            <div id="ordersList">
+                <!-- Orders will be loaded here -->
+            </div>
+        </section>
+    </main>
+    <script src="js/auth.js"></script>
+     <!-- ده فايل مسؤولل عن التاكد ان اليوزر مسجل دخلو يعني لوج ان ولوج اوت-->
+
+    <script src="js/main.js"></script>
+           <!--ده اللي بيتعامل مع العمليات التانية زي السيرش، تحميل الاوردرز-->
+</body>
+</html>
